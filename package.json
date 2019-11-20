@@ -1,5 +1,5 @@
 {
-  "name": "microservice-wibesplaylist",
+  "name": "Wibes-api-youtube",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -13,7 +13,7 @@
   "author": "Yves le boss",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/CorentinGautier/MicroService-WibesPlaylist/issues"
+    "url": "https://github.com/Yves-epsi/Wibes-api-youtube/issues"
   },
-  "homepage": "https://github.com/CorentinGautier/MicroService-WibesPlaylist#readme"
+  "homepage": "https://github.com/Yves-epsi/Wibes-api-youtube#readme"
 }
