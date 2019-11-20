@@ -11,7 +11,7 @@ function connection() {
 }
 
 
-exports.insertVideo(title, url, bio) {
+exports.insertVideo = (title, url, bio) => {
     //insert une video
     con = connection();
     con.connect(function(err) {
@@ -25,7 +25,7 @@ exports.insertVideo(title, url, bio) {
     });
 }
 
-exports.insertPlaylist(name, videos, idUser) {
+exports.insertPlaylist = (name, videos, idUser) => {
     //insert une playlist
     con = connection();
     con.connect(function(err) {
@@ -39,20 +39,20 @@ exports.insertPlaylist(name, videos, idUser) {
     });
 }
 
-exports.selectVideo() {
+exports.selectVideo = () => {
     //select des video
     con = connection();
     con.connect(function(err) {
         if (err) throw err;
         con.query("SELECT * FROM video", function(err, result) {
             if (err) throw err;
-            console.log(result);
+            return result;
         });
     });
 
 }
 
-exports.selectVideoById(id) {
+exports.selectVideoById = (id) => {
     //select des video
     con = connection();
     con.connect(function(err) {
@@ -65,7 +65,7 @@ exports.selectVideoById(id) {
 
 }
 
-exports.afficheVideosFromPlaylist() {
+exports.afficheVideosFromPlaylist = () => {
     //affiche le nom et les vidéos de chaque playlist
     con = connection();
     con.connect(function(err) {
@@ -77,7 +77,7 @@ exports.afficheVideosFromPlaylist() {
     });
 }
 
-exports.majTableVideo(nameOld, nameNew) {
+exports.majTableVideo = (nameOld, nameNew) => {
     //maj d'un champs de la table video
     con = connection();
     con.connect(function(err) {
@@ -90,7 +90,7 @@ exports.majTableVideo(nameOld, nameNew) {
     });
 }
 
-exports.majTablePLaylist(nameOld, nameNew) {
+exports.majTablePLaylist = (nameOld, nameNew) => {
     //maj d'un champs de la table playlist
     con = connection();
     con.connect(function(err) {
