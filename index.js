@@ -1,7 +1,19 @@
-var http = require('http');
+const http = require('http');
+const express = require('express');
+const indexRouter = require('./routes/indexRouter');
+const playlistRouter = require('./routes/playlistRouter');
+const VideoRouter = require('./routes/VideoRouter');
 
-var server = http.createServer(function(req, res) {
-  res.writeHead(200);
-  res.end('Salut tout le monde !');
+const app = express();
+
+app.listen(3000,()=> console.log('listen'));
+
+
+app.use(function(err, req, res, next) {
+  console.error(err.stack);
+  res.status(500).send('Something broke!');
 });
-server.listen(8080);
+
+app.use('/', indexRouter);
+app.use('/playlist', playlistRouter);
+app.use('/video', VideoRouter);
