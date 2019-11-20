@@ -1,7 +1,6 @@
 const YouTube = require('simple-youtube-api');
 const youtube = new YouTube('AIzaSyAN4uhkTbljQMj9xOTu6P1fwcPRMBpfuV0');
 
-
 //Récupérer une video par son ID : https://www.youtube.com/watch?v={ID}
 exports.getVideoById = function(id){
         return youtube.getVideoByID(id, {
