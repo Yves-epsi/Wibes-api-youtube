@@ -10,6 +10,6 @@ router.get('/:id', function (req, res, next) {
     res.send(req.params.id);
 });
 
-router.post('/:url', videoController.insertInBase);
+router.post('/:id', videoController.insertInBase);
 
 module.exports = router;

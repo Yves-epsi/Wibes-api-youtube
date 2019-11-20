@@ -6,3 +6,5 @@ class Playlist {
       this.videos = [];
     }
   }
+
+  module.exports = Playlist
