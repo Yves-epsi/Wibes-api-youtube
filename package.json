@@ -10,13 +10,14 @@
         "type": "git",
         "url": "git+https://github.com/Yves-epsi/Wibes-api-youtube/"
     },
-    "author": "Yves le boss",
+    "author": "none",
     "license": "ISC",
     "bugs": {
         "url": "https://github.com/Yves-epsi/Wibes-api-youtube/issues"
     },
     "homepage": "https://github.com/CorentinGautier/MicroService-WibesPlaylist#readme",
     "dependencies": {
-        "express": "^4.17.1"
+        "express": "^4.17.1",
+        "mysql": "^2.17.1"
     }
 }
