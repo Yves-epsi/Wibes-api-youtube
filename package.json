@@ -1,22 +1,22 @@
 {
-  "name": "microservice-wibesplaylist",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Yves-epsi/Wibes-api-youtube/"
-  },
-  "author": "Yves le boss",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/CorentinGautier/MicroService-WibesPlaylist/issues"
-  },
-  "homepage": "https://github.com/CorentinGautier/MicroService-WibesPlaylist#readme",
-  "dependencies": {
-    "express": "^4.17.1"
-  }
+    "name": "Wibes-api-youtube",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Yves-epsi/Wibes-api-youtube/"
+    },
+    "author": "Yves le boss",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Yves-epsi/Wibes-api-youtube/issues"
+    },
+    "homepage": "https://github.com/CorentinGautier/MicroService-WibesPlaylist#readme",
+    "dependencies": {
+        "express": "^4.17.1"
+    }
 }
