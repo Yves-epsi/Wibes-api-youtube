@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/CorentinGautier/MicroService-WibesPlaylist/issues"
   },
-  "homepage": "https://github.com/CorentinGautier/MicroService-WibesPlaylist#readme"
+  "homepage": "https://github.com/CorentinGautier/MicroService-WibesPlaylist#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
