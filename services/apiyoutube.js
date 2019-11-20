@@ -10,7 +10,7 @@ exports.getVideoById = function(id){
         })
             .then(video => {
                 if (video){
-                    return new Video(id, video.title, video.description);
+                    return new Video(id, video.raw.snippet.title, video.raw.snippet.description);
                 }
                 else console.log('video not found :(');
             })
@@ -23,7 +23,7 @@ exports.getVideoByUrl = function(url){
         "part": "snippet"
     }).then(video => {
         if (video){
-            return new Video(video.id, video.title, video.description);
+            return vid = new Video(video.id, video.title, video.description);
         }
         else console.log('Video not found :(' );
     })

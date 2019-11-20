@@ -6,3 +6,5 @@ class Video {
       this.bio = bio;
     }
 }
+
+module.exports = Video

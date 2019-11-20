@@ -11,13 +11,13 @@ function connection() {
 }
 
 
-exports.insertVideo = (title, url, bio) => {
+exports.insertVideo = (id, title, url, bio) => {
     //insert une video
     con = connection();
     con.connect(function(err) {
         if (err) throw err;
         console.log("Connected!");
-        var sql = "INSERT INTO video (title, url, bio) VALUES ('" + title + "','" + url + "', '" + bio + "' )";
+        var sql = "INSERT INTO video (idVideo, title, url, bio) VALUES ('" + id + "','" + title + "','" + url + "', '" + bio + "' )";
         con.query(sql, function(err) {
             if (err) throw err;
             console.log("1 record inserted");

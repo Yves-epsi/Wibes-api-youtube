@@ -8,7 +8,7 @@ CREATE TABLE Playlist
 
 CREATE TABLE Video
 (
-    idVideo VARCHAR(200)NULL,
+    idVideo VARCHAR(200) NOT NULL,
     title VARCHAR(200) NOT NULL,
     url MEDIUMTEXT NOT NULL,
     bio MEDIUMTEXT
