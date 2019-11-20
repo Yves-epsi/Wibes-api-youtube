@@ -11,7 +11,7 @@ exports.getVideoById = function(id){
         })
             .then(video => {
                 if (video){
-                    return new Video(id, video.raw.snippet.title, video.raw.snippet.description);
+                    return new Video(id, video.title, video.description);
                 }
                 else console.log('video not found :(');
             })

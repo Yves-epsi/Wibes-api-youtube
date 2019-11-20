@@ -13,5 +13,5 @@ const getVideoById = (id) => {
 };
 
 exports.getAllVideos = (req, res) => {
-    res.json(connexionService.selectVideo());
+    res.send(connexionService.selectVideo());
 };

@@ -44,9 +44,9 @@ exports.selectVideo = () => {
     con = connection();
     con.connect(function(err) {
         if (err) throw err;
-        con.query("SELECT * FROM video", function(err, result) {
-            if (err) throw err;
-            return result;
+        con.query("SELECT * FROM video", function(err, res) {
+            console.log(res)
+            return res;
         });
     });
 
@@ -57,9 +57,8 @@ exports.selectVideoById = (id) => {
     con = connection();
     con.connect(function(err) {
         if (err) throw err;
-        con.query("SELECT * FROM video WHERE idVideo='" + id, function(err, result) {
-            if (err) throw err;
-            console.log(result);
+        con.query("SELECT * FROM video WHERE idVideo='" + id, function(res) {
+            return res;
         });
     });
 
