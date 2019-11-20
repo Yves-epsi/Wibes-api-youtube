@@ -1,25 +1,27 @@
 {
-    "name": "microservice-wibesplaylist",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/CorentinGautier/MicroService-WibesPlaylist.git"
-    },
-    "author": "none",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/CorentinGautier/MicroService-WibesPlaylist/issues"
-    },
-    "homepage": "https://github.com/CorentinGautier/MicroService-WibesPlaylist#readme",
-    "dependencies": {
-        "express": "^4.17.1",
-        "mysql": "^2.17.1",
-        "services": "0.0.3",
-        "simple-youtube-api": "^5.2.1"
-    }
+  "name": "microservice-wibesplaylist",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CorentinGautier/MicroService-WibesPlaylist.git"
+  },
+  "author": "none",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CorentinGautier/MicroService-WibesPlaylist/issues"
+  },
+  "homepage": "https://github.com/CorentinGautier/MicroService-WibesPlaylist#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "log4js": "^6.1.0",
+    "mocha": "^6.2.2",
+    "mysql": "^2.17.1",
+    "services": "0.0.3",
+    "simple-youtube-api": "^5.2.1"
+  }
 }
