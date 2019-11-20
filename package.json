@@ -15,7 +15,7 @@
     "bugs": {
         "url": "https://github.com/Yves-epsi/Wibes-api-youtube/issues"
     },
-    "homepage": "https://github.com/CorentinGautier/MicroService-WibesPlaylist#readme",
+    "homepage": "https://github.com/Yves-epsi/Wibes-api-youtube#readme",
     "dependencies": {
         "express": "^4.17.1",
         "mysql": "^2.17.1"
