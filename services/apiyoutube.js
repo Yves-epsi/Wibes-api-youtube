@@ -22,7 +22,7 @@ exports.getVideoByUrl = function(url){
         "part": "snippet"
     }).then(video => {
         if (video){
-            return new Video(id, video.title, video.description);
+            return new Video(video.id, video.title, video.description);
         }
         else console.log('Video not found :(' );
     })
