@@ -1,5 +1,7 @@
 const YouTube = require('simple-youtube-api');
-const youtube = new YouTube('AIzaSyAN4uhkTbljQMj9xOTu6P1fwcPRMBpfuV0');
+const config = require('./config');
+const youtube = new YouTube(config.api);
+
 const Video = require('../models/video');
 
 //Récupérer une video par son ID : https://www.youtube.com/watch?v={ID}
