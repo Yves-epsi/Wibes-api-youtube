@@ -1,0 +1,18 @@
+[2019-11-20T16:13:15.509] [INFO] START SERVER - Démarrage de l'application
+[2019-11-20T16:13:15.516] [INFO] START SERVER - Application démarrée
+[2019-11-20T16:14:06.812] [INFO] START SERVER - Démarrage de l'application
+[2019-11-20T16:14:06.819] [INFO] START SERVER - Application démarrée
+[2019-11-20T16:44:44.977] [INFO] START SERVER - Démarrage de l'application
+[2019-11-20T16:44:44.984] [INFO] START SERVER - Application démarrée
+[2019-11-20T16:49:26.250] [INFO] START SERVER - Démarrage de l'application
+[2019-11-20T16:49:26.256] [INFO] START SERVER - Application démarrée
+[2019-11-20T16:50:31.176] [INFO] START SERVER - Démarrage de l'application
+[2019-11-20T16:50:31.183] [INFO] START SERVER - Application démarrée
+[2019-11-20T16:51:13.008] [INFO] START SERVER - Démarrage de l'application
+[2019-11-20T16:51:13.014] [INFO] START SERVER - Application démarrée
+[2019-11-20T16:51:48.289] [INFO] START SERVER - Démarrage de l'application
+[2019-11-20T16:51:48.295] [INFO] START SERVER - Application démarrée
+[2019-11-20T16:52:06.038] [INFO] START SERVER - Démarrage de l'application
+[2019-11-20T16:52:06.044] [INFO] START SERVER - Application démarrée
+[2019-11-20T16:53:00.428] [INFO] START SERVER - Démarrage de l'application
+[2019-11-20T16:53:00.434] [INFO] START SERVER - Application démarrée
