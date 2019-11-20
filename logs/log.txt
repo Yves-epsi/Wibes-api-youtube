@@ -1,0 +1,2 @@
+[2019-11-20T15:58:33.098] [INFO] START SERVER - Démarrage de l'application
+[2019-11-20T15:58:33.105] [INFO] START SERVER - Application démarrée
