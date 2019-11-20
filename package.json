@@ -18,7 +18,6 @@
   "homepage": "https://github.com/CorentinGautier/MicroService-WibesPlaylist#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "js-logger": "^1.6.0",
     "log4js": "^6.1.0",
     "mocha": "^6.2.2",
     "mysql": "^2.17.1",
