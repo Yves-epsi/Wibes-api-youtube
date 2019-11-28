@@ -6,3 +6,4 @@ npm-debug.log
 .idea
 /logs
 services/config.js
+/config-mail.js
