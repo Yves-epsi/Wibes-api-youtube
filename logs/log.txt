@@ -2,3 +2,93 @@
 [2019-11-20T15:58:33.105] [INFO] START SERVER - Application démarrée
 [2019-11-20T16:56:07.611] [ERROR] START SERVER - Démarrage de l'application
 [2019-11-20T16:56:07.623] [INFO] START SERVER - Application démarrée
+[2019-12-19T14:19:15.748] [ERROR] START SERVER - Démarrage de l'application
+[2019-12-19T14:19:16.054] [INFO] START SERVER - Démarrage de l'application
+[2019-12-19T14:19:16.093] [INFO] START SERVER - Application démarrée
+[2019-12-19T14:21:56.598] [ERROR] START SERVER - Démarrage de l'application
+[2019-12-19T14:21:56.846] [INFO] START SERVER - Démarrage de l'application
+[2019-12-19T14:21:56.877] [INFO] START SERVER - Application démarrée
+[2019-12-19T14:43:01.265] [ERROR] START SERVER - Démarrage de l'application
+[2019-12-19T14:43:01.603] [INFO] START SERVER - Démarrage de l'application
+[2019-12-19T14:43:01.634] [INFO] START SERVER - Application démarrée
+[2019-12-19T14:45:40.069] [ERROR] START SERVER - Démarrage de l'application
+[2019-12-19T14:45:40.392] [INFO] START SERVER - Démarrage de l'application
+[2019-12-19T14:45:40.427] [INFO] START SERVER - Application démarrée
+[2019-12-19T14:49:42.130] [ERROR] START SERVER - Démarrage de l'application
+[2019-12-19T14:49:42.440] [INFO] START SERVER - Démarrage de l'application
+[2019-12-19T14:49:42.472] [INFO] START SERVER - Application démarrée
+[2019-12-19T14:50:17.559] [ERROR] START SERVER - Démarrage de l'application
+[2019-12-19T14:50:17.884] [INFO] START SERVER - Démarrage de l'application
+[2019-12-19T14:50:17.912] [INFO] START SERVER - Application démarrée
+[2019-12-19T14:51:28.537] [ERROR] START SERVER - Démarrage de l'application
+[2019-12-19T14:51:28.861] [INFO] START SERVER - Démarrage de l'application
+[2019-12-19T14:51:28.888] [INFO] START SERVER - Application démarrée
+[2019-12-19T14:54:56.761] [ERROR] START SERVER - Démarrage de l'application
+[2019-12-19T14:54:57.072] [INFO] START SERVER - Démarrage de l'application
+[2019-12-19T14:54:57.107] [INFO] START SERVER - Application démarrée
+[2019-12-19T14:55:19.861] [ERROR] START SERVER - Démarrage de l'application
+[2019-12-19T14:55:20.256] [INFO] START SERVER - Démarrage de l'application
+[2019-12-19T14:55:20.296] [INFO] START SERVER - Application démarrée
+[2019-12-19T14:56:21.412] [ERROR] START SERVER - Démarrage de l'application
+[2019-12-19T14:56:21.729] [INFO] START SERVER - Démarrage de l'application
+[2019-12-19T14:56:21.772] [INFO] START SERVER - Application démarrée
+[2019-12-19T14:58:47.767] [ERROR] START SERVER - Démarrage de l'application
+[2019-12-19T14:58:48.058] [INFO] START SERVER - Démarrage de l'application
+[2019-12-19T14:58:48.096] [INFO] START SERVER - Application démarrée
+[2019-12-19T15:12:56.091] [ERROR] START SERVER - Démarrage de l'application
+[2019-12-19T15:12:56.349] [INFO] START SERVER - Démarrage de l'application
+[2019-12-19T15:12:56.381] [INFO] START SERVER - Application démarrée
+[2019-12-19T15:15:31.851] [ERROR] START SERVER - Démarrage de l'application
+[2019-12-19T15:15:32.120] [INFO] START SERVER - Démarrage de l'application
+[2019-12-19T15:15:32.150] [INFO] START SERVER - Application démarrée
+[2019-12-19T15:21:31.823] [ERROR] START SERVER - Démarrage de l'application
+[2019-12-19T15:21:32.149] [INFO] START SERVER - Démarrage de l'application
+[2019-12-19T15:21:32.180] [INFO] START SERVER - Application démarrée
+[2019-12-19T15:54:24.452] [ERROR] START SERVER - Démarrage de l'application
+[2019-12-19T15:54:24.756] [INFO] START SERVER - Démarrage de l'application
+[2019-12-19T15:54:24.786] [INFO] START SERVER - Application démarrée
+[2019-12-19T15:55:04.504] [ERROR] START SERVER - Démarrage de l'application
+[2019-12-19T15:55:04.854] [INFO] START SERVER - Application démarrée
+[2019-12-19T15:55:04.825] [INFO] START SERVER - Démarrage de l'application
+[2019-12-19T15:55:29.646] [ERROR] START SERVER - Démarrage de l'application
+[2019-12-19T15:55:29.918] [INFO] START SERVER - Démarrage de l'application
+[2019-12-19T15:55:29.945] [INFO] START SERVER - Application démarrée
+[2019-12-19T15:56:17.444] [ERROR] START SERVER - Démarrage de l'application
+[2019-12-19T15:56:17.672] [INFO] START SERVER - Démarrage de l'application
+[2019-12-19T15:56:17.696] [INFO] START SERVER - Application démarrée
+[2019-12-19T15:57:32.955] [ERROR] START SERVER - Démarrage de l'application
+[2019-12-19T15:57:33.273] [INFO] START SERVER - Démarrage de l'application
+[2019-12-19T15:57:33.312] [INFO] START SERVER - Application démarrée
+[2019-12-19T15:58:40.102] [ERROR] START SERVER - Démarrage de l'application
+[2019-12-19T15:58:40.346] [INFO] START SERVER - Application démarrée
+[2019-12-19T15:58:40.323] [INFO] START SERVER - Démarrage de l'application
+[2019-12-19T15:59:32.858] [ERROR] START SERVER - Démarrage de l'application
+[2019-12-19T15:59:33.176] [INFO] START SERVER - Démarrage de l'application
+[2019-12-19T15:59:33.205] [INFO] START SERVER - Application démarrée
+[2019-12-19T16:00:11.935] [ERROR] START SERVER - Démarrage de l'application
+[2019-12-19T16:00:12.300] [INFO] START SERVER - Démarrage de l'application
+[2019-12-19T16:00:12.333] [INFO] START SERVER - Application démarrée
+[2019-12-19T16:01:34.387] [ERROR] START SERVER - Démarrage de l'application
+[2019-12-19T16:01:34.630] [INFO] START SERVER - Démarrage de l'application
+[2019-12-19T16:01:34.653] [INFO] START SERVER - Application démarrée
+[2019-12-19T16:02:21.048] [ERROR] START SERVER - Démarrage de l'application
+[2019-12-19T16:02:21.267] [INFO] START SERVER - Démarrage de l'application
+[2019-12-19T16:02:21.287] [INFO] START SERVER - Application démarrée
+[2019-12-19T16:08:30.933] [ERROR] START SERVER - Démarrage de l'application
+[2019-12-19T16:08:31.072] [INFO] START SERVER - Démarrage de l'application
+[2019-12-19T16:08:31.086] [INFO] START SERVER - Application démarrée
+[2019-12-19T16:14:16.984] [ERROR] START SERVER - Démarrage de l'application
+[2019-12-19T16:14:17.159] [INFO] START SERVER - Application démarrée
+[2019-12-19T16:14:17.144] [INFO] START SERVER - Démarrage de l'application
+[2019-12-19T16:18:47.923] [ERROR] START SERVER - Démarrage de l'application
+[2019-12-19T16:18:48.060] [INFO] START SERVER - Démarrage de l'application
+[2019-12-19T16:18:48.074] [INFO] START SERVER - Application démarrée
+[2019-12-19T16:20:44.800] [ERROR] START SERVER - Démarrage de l'application
+[2019-12-19T16:20:44.953] [INFO] START SERVER - Application démarrée
+[2019-12-19T16:20:44.939] [INFO] START SERVER - Démarrage de l'application
+[2019-12-19T16:23:10.690] [ERROR] START SERVER - Démarrage de l'application
+[2019-12-19T16:23:10.832] [INFO] START SERVER - Démarrage de l'application
+[2019-12-19T16:23:10.846] [INFO] START SERVER - Application démarrée
+[2019-12-19T16:28:21.752] [ERROR] START SERVER - Démarrage de l'application
+[2019-12-19T16:28:21.901] [INFO] START SERVER - Démarrage de l'application
+[2019-12-19T16:28:21.916] [INFO] START SERVER - Application démarrée

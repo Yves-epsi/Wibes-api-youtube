@@ -44,7 +44,7 @@ let options = {
   files: ['./routes/**/*.js'] //Path to the API handle folder
 };
 expressSwagger(options)
-app.listen(8080);
+app.listen(3001);
 
 app.use(function (err, req, res, next) {
   console.error(err.stack);

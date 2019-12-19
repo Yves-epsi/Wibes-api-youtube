@@ -17,7 +17,7 @@ var mail = {
 
         var mailOptions = {
             from: config.user,
-            to: "florian.elie@epsi.fr",
+            to: "api.wibes@gmail.com",
             subject: subject,
             text: str[subject]+error
         };

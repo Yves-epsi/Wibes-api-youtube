@@ -5,10 +5,7 @@ const router = express.Router();
 
 router.get('/', videoController.getAllVideos);
 
-router.get('/:id', function (req, res, next) {
-    console.log(req.params.id);
-    res.send(req.params.id);
-});
+router.get('/:id', videoController.getVideoById);
 
 router.post('/:id', videoController.insertInBase);
 

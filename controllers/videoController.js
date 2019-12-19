@@ -8,10 +8,13 @@ exports.insertInBase = (req, res) => {
     res.send("fini")
 };
 
-const getVideoById = (id) => {
-    return connexionService.selectVideo();
+exports.getVideoById = (req, res) => {
+    console.log(req.params.id)
+    console.log(connexionService.selectVideoById(req.params.id))
+    res.send(connexionService.selectVideoById(req.params.id));
 };
 
 exports.getAllVideos = (req, res) => {
+    console.log(connexionService.selectVideo())
     res.send(connexionService.selectVideo());
 };

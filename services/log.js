@@ -1,5 +1,5 @@
 const log4js = require('log4js');
-const alert = require('./mail');
+const alert = require('./mail.js');
 
 //Logger tout les évènements de l'application.
 exports.writeLog = function(text, category = "Wibes", level = "INFO"){
