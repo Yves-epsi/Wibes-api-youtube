@@ -41,28 +41,28 @@ exports.insertPlaylist = (name, videos, idUser) => {
 
 exports.selectVideo = () => {
     //select des video
-    con = connection();
-    con.connect(function(err) {
-        if (err) throw err;
-        con.query("SELECT * FROM video", function(err, res, fields) {
-            console.log(res)
-            return res;
+    return new Promise(resolve => {
+        con = connection();
+        con.connect(function(err) {
+            if (err) throw err;
+            con.query("SELECT * FROM video", function(err, res, fields) {
+                resolve(res);
+            });
         });
     });
-
 }
 
 exports.selectVideoById = (id) => {
     //select des video
-    con = connection();
-    con.connect(function(err) {
-        if (err) throw err;
-        con.query("SELECT idVideo, title, url FROM video WHERE idVideo= ?", id, function(err, res, fields) {
-            console.log(res)
-            return res;
+    return new Promise(resolve => {
+        con = connection();
+        con.connect(function(err) {
+            if (err) throw err;
+            con.query("SELECT idVideo, title, url FROM video WHERE idVideo= ?", id, function(err, res, fields) {
+                resolve(res);
+            });
         });
     });
-
 }
 
 exports.afficheVideosFromPlaylist = () => {

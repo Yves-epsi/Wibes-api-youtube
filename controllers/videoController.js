@@ -8,13 +8,12 @@ exports.insertInBase = (req, res) => {
     res.send("fini")
 };
 
-exports.getVideoById = (req, res) => {
-    console.log(req.params.id)
-    console.log(connexionService.selectVideoById(req.params.id))
-    res.send(connexionService.selectVideoById(req.params.id));
+exports.getVideoById = async (req, res) => {
+    const result = await connexionService.selectVideoById(req.params.id);
+    res.send(result);
 };
 
-exports.getAllVideos = (req, res) => {
-    console.log(connexionService.selectVideo())
-    res.send(connexionService.selectVideo());
+exports.getAllVideos = async (req, res) => {
+    const result = await connexionService.selectVideo();
+    res.send(result);
 };
