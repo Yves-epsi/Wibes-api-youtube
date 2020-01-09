@@ -103,3 +103,79 @@ exports.majTablePLaylist = (nameOld, nameNew) => {
         });
     })
 }
+
+exports.findVideosWithTitle = (title) => {
+    //recherche de video qui contiennent le mot recherché dans le tritre
+    return new Promise(resolve => {
+        con = connection();
+        con.connect(function(err) {
+            if (err) throw err;
+            con.query("SELECT * FROM VIDEO WHERE title = ?", title,
+                function() {
+                    resolve(res);
+                });
+        });
+    })
+}
+
+exports.deletePlaylist = (name) => {
+    //supression de playlist
+    return new Promise(resolve => {
+        con = connection();
+        con.connect(function(err) {
+            if (err) throw err;
+            con.query("DELETE FROM PLAYLIST WHERE name = ?", name,
+                function() {
+                    resolve(res);
+                });
+        });
+    })
+}
+
+exports.deleteVideo = (name) => {
+    //supression de vidéo
+    return new Promise(resolve => {
+        con = connection();
+        con.connect(function(err) {
+            if (err) throw err;
+            con.query("DELETE FROM VIDEO WHERE name = ?", name,
+                function() {
+                    resolve(res);
+                });
+        });
+    })
+}
+
+exports.deleteVideo = (idUser) => {
+    //recherche de playlist par iduser
+    return new Promise(resolve => {
+        con = connection();
+        con.connect(function(err) {
+            if (err) throw err;
+            con.query("SELECT * FROM PLAYLIST WHERE idUser = ?", idUser,
+                function() {
+                    resolve(res);
+                });
+        });
+    })
+}
+
+
+exports.associationVideoPLaylist = (idVideo, idPlaylist) => {
+    //inserer l'id d'une vidéo dans une playlist en prennant en compte les id déjà dans ce champs
+    return new Promise(resolve => {
+        con = connection();
+        con.connect(function(err) {
+            if (err) throw err;
+            con.query("UPDATE PLAYLIST SET videos = (select videos from PLAYLIST WHERE idPlaylist=?)", idPlaylist,
+                function() {
+                    resolve(res);
+                });
+            let val = res + idVideo
+            con.query("UPDATE PLAYLIST SET videos = ? where idPlaylist = ?", val, idPlaylist,
+                function() {
+                    resolve(res);
+                });
+        });
+    })
+}
