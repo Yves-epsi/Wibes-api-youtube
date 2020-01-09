@@ -4,6 +4,7 @@ const indexRouter = require('./routes/indexRouter');
 const playlistRouter = require('./routes/playlistRouter');
 const VideoRouter = require('./routes/VideoRouter');
 const logger = require('./services/log');
+var bodyParser = require('body-parser');
 
 logger.writeLog("Démarrage de l'application", "START SERVER", "ERROR");
 

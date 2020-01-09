@@ -1,33 +1,18 @@
 const express = require('express');
+var bodyParser = require('body-parser')
+
+const playlistController = require('../controllers/playlistController');
 
 const router = express.Router();
 
+var jsonParser = bodyParser.json()
 
-/**
- * This function comment is parsed by doctrine
- * @route GET /
- * @group foo - Operations about user
- * No pramas 
- * @returns {object} 200 - An array of playlist info
- * @returns {Error}  default - Unexpected error
- */
-router.get('/', function(req, res, next) {
-    console.log("ok");
-    res.send('special');
-});
+//router.get('/', playlistController.getAllPlaylist);
 
+//router.get('/:name', playlistController.getPlaylistByName);
 
-/**
- * This function comment is parsed by doctrine
- * @route GET /:id
- * @group foo - Operations about user
- * @param id - id of your music
- * @returns {object} 200 - An array of music info
- * @returns {Error}  default - Unexpected error
- */
-router.get('/:id', function(req, res, next) {
-    console.log(req.params.id);
-    res.send(req.params.id);
-});
+router.post('/', jsonParser, playlistController.createPlaylist);
+
+//router.put('/:id', playlistController.modifyPlaylist);
 
 module.exports = router;
