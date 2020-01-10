@@ -16,8 +16,9 @@ exports.insertVideo = (idVideo, title, url, bio) => {
         con = connection();
         con.connect(function(err) {
             if (err) throw err;
-            con.query("INSERT INTO video (idVideo, title, url, bio) VALUES ('?','?','?')", idVideo, title, url, bio, function(err, res) {
-                resolve(res)
+            var sql = "INSERT INTO video (idVideo, title, url, bio) VALUES ('" + idVideo + "','" + title + "','" + url + "', '" + bio + "' )";
+            con.query(sql, function(err) {
+                if (err) throw err;
             });
         });
 }
@@ -25,11 +26,11 @@ exports.insertVideo = (idVideo, title, url, bio) => {
 exports.insertPlaylist = (name, videos, idUser) => {
     //insert une playlist
         con = connection();
-        console.log(name)
         con.connect(function(err) {
             if (err) throw err;
-            con.query("INSERT INTO playlist (name, videos, idUser) VALUES ('?','?','?')", name, videos, idUser, function(err, res) {
-                resolve(res)
+            var sql = "INSERT INTO playlist (name, videos, idUser) VALUES ('" + name + "','" + videos + "', '" + idUser + "'  )";
+            con.query(sql, function(err) {
+                if (err) throw err;
             });
         });
 }
@@ -120,7 +121,7 @@ exports.findVideosWithTitle = (title) => {
         con = connection();
         con.connect(function(err) {
             if (err) throw err;
-            con.query("SELECT * FROM VIDEO WHERE title = ?", title,
+            con.query("SELECT * FROM VIDEO WHERE title LIKE ?", title,
                 function() {
                     resolve(res);
                 });
@@ -156,7 +157,7 @@ exports.deleteVideo = (name) => {
     })
 }
 
-exports.deleteVideo = (idUser) => {
+exports.selectPlaylistbyUser = (idUser) => {
     //recherche de playlist par iduser
     return new Promise(resolve => {
         con = connection();
