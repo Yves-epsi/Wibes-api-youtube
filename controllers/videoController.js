@@ -17,3 +17,8 @@ exports.getAllVideos = async (req, res) => {
     const result = await connexionService.selectVideo();
     res.send(result);
 };
+
+exports.getVideoByTitle = async (req, res) => {
+    const result = await connexionService.findVideosWithTitle(req.params.title);
+    res.send(result);
+};

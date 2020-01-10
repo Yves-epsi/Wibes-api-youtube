@@ -25,7 +25,27 @@ router.get('/', playlistController.getAllPlaylists);
  * @returns {object} 200 - playlist about your user
  * @returns {Error}  default - Unexpected error
  */
-//router.get('/:name', playlistController.getPlaylistByName);
+router.get('/name/:name', playlistController.getPlaylistByName);
+
+/**
+ * This function comment is parsed by doctrine
+ * @route GET /:name
+ * @group foo - Operations about user
+ * @param name - name of your user
+ * @returns {object} 200 - playlist about your user
+ * @returns {Error}  default - Unexpected error
+ */
+router.get('/:id', playlistController.getPlaylistById);
+
+/**
+ * This function comment is parsed by doctrine
+ * @route GET /:name
+ * @group foo - Operations about user
+ * @param name - name of your user
+ * @returns {object} 200 - playlist about your user
+ * @returns {Error}  default - Unexpected error
+ */
+router.get('/user/:idUser', playlistController.getPlaylistByIdUser);
 
 /**
  * This function comment is parsed by doctrine
@@ -38,6 +58,16 @@ router.get('/', playlistController.getAllPlaylists);
  */
 router.post('/', jsonParser, playlistController.createPlaylist);
 
-//router.put('/:id', playlistController.modifyPlaylist);
+router.put('/:idPlaylist/:idVideo', playlistController.insertVideoInPlaylist);
+
+/**
+ * This function comment is parsed by doctrine
+ * @route GET /:name
+ * @group foo - Operations about user
+ * @param name - name of your user
+ * @returns {object} 200 - playlist about your user
+ * @returns {Error}  default - Unexpected error
+ */
+router.delete('/:id', playlistController.deletePlaylist);
 
 module.exports = router;

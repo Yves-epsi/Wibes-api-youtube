@@ -7,6 +7,8 @@ router.get('/', videoController.getAllVideos);
 
 router.get('/:id', videoController.getVideoById);
 
+router.get('/title/:title', videoController.getVideoByTitle);
+
 router.post('/:id', videoController.insertInBase);
 
 module.exports = router;
