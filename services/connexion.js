@@ -13,7 +13,6 @@ function connection() {
 
 exports.insertVideo = (idVideo, title, url, bio) => {
     //insert une video
-    return new Promise(resolve => {
         con = connection();
         con.connect(function(err) {
             if (err) throw err;
@@ -21,20 +20,18 @@ exports.insertVideo = (idVideo, title, url, bio) => {
                 resolve(res)
             });
         });
-    })
 }
 
 exports.insertPlaylist = (name, videos, idUser) => {
     //insert une playlist
-    return new Promise(resolve => {
         con = connection();
+        console.log(name)
         con.connect(function(err) {
             if (err) throw err;
             con.query("INSERT INTO playlist (name, videos, idUser) VALUES ('?','?','?')", name, videos, idUser, function(err, res) {
                 resolve(res)
             });
         });
-    });
 }
 
 exports.selectVideo = () => {
@@ -70,6 +67,19 @@ exports.afficheVideosFromPlaylist = () => {
         con.connect(function(err) {
             if (err) throw err;
             con.query("SELECT videos FROM playlist", function(err, res) {
+                resolve(res);
+            });
+        });
+    })
+}
+
+exports.selectPlaylist = () => {
+    //affiche le nom et les vidéos de chaque playlist
+    return new Promise(resolve => {
+        con = connection();
+        con.connect(function(err) {
+            if (err) throw err;
+            con.query("SELECT * FROM playlist", function(err, res) {
                 resolve(res);
             });
         });

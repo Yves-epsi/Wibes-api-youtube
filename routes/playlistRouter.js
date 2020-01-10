@@ -15,7 +15,7 @@ var jsonParser = bodyParser.json()
  * @returns {object} 200 - An array of playlist info
  * @returns {Error}  default - Unexpected error
  */
-router.get('/', playlistController.getAllPlaylist);
+router.get('/', playlistController.getAllPlaylists);
 
 /**
  * This function comment is parsed by doctrine
@@ -25,7 +25,7 @@ router.get('/', playlistController.getAllPlaylist);
  * @returns {object} 200 - playlist about your user
  * @returns {Error}  default - Unexpected error
  */
-router.get('/:name', playlistController.getPlaylistByName);
+//router.get('/:name', playlistController.getPlaylistByName);
 
 /**
  * This function comment is parsed by doctrine
