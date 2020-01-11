@@ -170,13 +170,13 @@ exports.deleteVideo = (id) => {
     })
 }
 
-exports.deleteVideoInPlaylist = (idVideotoDelete) => {
+exports.deleteVideoInPlaylist = (idVideotoDelete, idPlaylist) => {
     //supression d'une vidéo dans une playlist
     return new Promise(resolve => {
         con = connection();
         con.connect(function(err) {
             if (err) throw err;
-            con.query("UPDATE PLAYLIST set videos= REPLACE (videos, ? , '' ) WHERE playlist = idPlaylist AND videos LIKE '%?%'", idVideotoDelete, idVideotoDelete,
+            con.query("UPDATE PLAYLIST set videos= REPLACE (videos, ? , '' ) WHERE ? = idPlaylist AND videos LIKE '%?%'", idVideotoDelete, idPlaylist, idVideotoDelete,
                 function(err, res) {
                     resolve(res);
                 });
