@@ -60,6 +60,8 @@ router.post('/', jsonParser, playlistController.createPlaylist);
 
 router.put('/:idPlaylist/:idVideo', playlistController.insertVideoInPlaylist);
 
+router.put('/delete/:idPlaylist/:idVideo', playlistController.deleteVideoInPlaylist);
+
 /**
  * This function comment is parsed by doctrine
  * @route GET /:name

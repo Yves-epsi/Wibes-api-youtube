@@ -170,15 +170,24 @@ exports.deleteVideo = (id) => {
     })
 }
 
-exports.deleteVideoInPlaylist = (idVideotoDelete, idPlaylist) => {
+exports.deleteVideoInPlaylist = (idPlaylist, idVideo) => {
     //supression d'une vidéo dans une playlist
     return new Promise(resolve => {
         con = connection();
         con.connect(function(err) {
             if (err) throw err;
-            con.query("UPDATE PLAYLIST set videos= REPLACE (videos, ? , '' ) WHERE ? = idPlaylist AND videos LIKE '%?%'", idVideotoDelete, idPlaylist, idVideotoDelete,
+            con.query("SELECT videos from PLAYLIST WHERE idPlaylist=?", idPlaylist,
                 function(err, res) {
-                    resolve(res);
+                    if(res[0].videos.includes(idVideo)) {
+                        let val = res[0].videos.replace("/"+ idVideo, "")
+                        console.log(val)
+                        con.query("UPDATE PLAYLIST SET videos = ? where idPlaylist = ?", [val, idPlaylist],
+                        function(err, res) {
+                            resolve(res);
+                        });
+                    } else {
+                        resolve("La video n'est pas dans la playlist");
+                    }
                 });
         });
     })
@@ -208,7 +217,6 @@ exports.associationVideoPLaylist = async(idPlaylist, idVideo) => {
             if (err) throw err;
             con.query("SELECT videos from PLAYLIST WHERE idPlaylist=?", idPlaylist,
                 function(err, res) {
-<<<<<<< HEAD
                     if(!res[0].videos.includes(idVideo)) {
                         let val = res[0].videos + "/" + idVideo
                         con.query("UPDATE PLAYLIST SET videos = ? where idPlaylist = ?", [val, idPlaylist],
@@ -219,17 +227,6 @@ exports.associationVideoPLaylist = async(idPlaylist, idVideo) => {
                         resolve("La video est déja dans la playlist");
                     }
                 });
-=======
-                    console.log(res)
-                    let val = res.videos + idVideo
-                    console.log(val)
-                    con.query("UPDATE PLAYLIST SET videos = ? where idPlaylist = ?", [val, idPlaylist],
-                        function(err, res) {
-                            resolve(res);
-                        });
-                });
-
->>>>>>> 9e4035cc56d0a92274dd20f922aa774fe478f832
         });
     })
 }

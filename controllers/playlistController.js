@@ -36,3 +36,8 @@ exports.insertVideoInPlaylist = async (req, res) => {
     const result = await connexionService.associationVideoPLaylist(req.params.idPlaylist, req.params.idVideo);
     res.send(result);
 };
+
+exports.deleteVideoInPlaylist = async (req, res) => {
+    const result = await connexionService.deleteVideoInPlaylist(req.params.idPlaylist, req.params.idVideo);
+    res.send(result);
+};
