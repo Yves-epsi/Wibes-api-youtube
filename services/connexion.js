@@ -13,26 +13,26 @@ function connection() {
 
 exports.insertVideo = (idVideo, title, url, bio) => {
     //insert une video
-        con = connection();
-        con.connect(function(err) {
+    con = connection();
+    con.connect(function(err) {
+        if (err) throw err;
+        var sql = "INSERT INTO video (idVideo, title, url, bio) VALUES ('" + idVideo + "','" + title + "','" + url + "', '" + bio + "' )";
+        con.query(sql, function(err) {
             if (err) throw err;
-            var sql = "INSERT INTO video (idVideo, title, url, bio) VALUES ('" + idVideo + "','" + title + "','" + url + "', '" + bio + "' )";
-            con.query(sql, function(err) {
-                if (err) throw err;
-            });
         });
+    });
 }
 
 exports.insertPlaylist = (name, videos, idUser) => {
     //insert une playlist
-        con = connection();
-        con.connect(function(err) {
+    con = connection();
+    con.connect(function(err) {
+        if (err) throw err;
+        var sql = "INSERT INTO playlist (name, videos, idUser) VALUES ('" + name + "','" + videos + "', '" + idUser + "'  )";
+        con.query(sql, function(err) {
             if (err) throw err;
-            var sql = "INSERT INTO playlist (name, videos, idUser) VALUES ('" + name + "','" + videos + "', '" + idUser + "'  )";
-            con.query(sql, function(err) {
-                if (err) throw err;
-            });
         });
+    });
 }
 
 exports.selectVideo = () => {
@@ -170,6 +170,21 @@ exports.deleteVideo = (id) => {
     })
 }
 
+exports.deleteVideoInPlaylist = (idVideotoDelete) => {
+    //supression d'une vidéo dans une playlist
+    return new Promise(resolve => {
+        con = connection();
+        con.connect(function(err) {
+            if (err) throw err;
+            con.query("UPDATE PLAYLIST set videos= REPLACE (videos, ? , '' ) WHERE playlist = idPlaylist AND videos LIKE '%?%'", idVideotoDelete, idVideotoDelete,
+                function(err, res) {
+                    resolve(res);
+                });
+        });
+    })
+}
+
+
 exports.selectPlaylistbyUser = (idUser) => {
     //recherche de playlist par iduser
     return new Promise(resolve => {
@@ -185,7 +200,7 @@ exports.selectPlaylistbyUser = (idUser) => {
 }
 
 
-exports.associationVideoPLaylist = async (idPlaylist, idVideo) => {
+exports.associationVideoPLaylist = async(idPlaylist, idVideo) => {
     //inserer l'id d'une vidéo dans une playlist en prennant en compte les id déjà dans ce champs
     return new Promise(resolve => {
         con = connection();
@@ -193,6 +208,7 @@ exports.associationVideoPLaylist = async (idPlaylist, idVideo) => {
             if (err) throw err;
             con.query("SELECT videos from PLAYLIST WHERE idPlaylist=?", idPlaylist,
                 function(err, res) {
+<<<<<<< HEAD
                     if(!res[0].videos.includes(idVideo)) {
                         let val = res[0].videos + "/" + idVideo
                         con.query("UPDATE PLAYLIST SET videos = ? where idPlaylist = ?", [val, idPlaylist],
@@ -203,6 +219,17 @@ exports.associationVideoPLaylist = async (idPlaylist, idVideo) => {
                         resolve("La video est déja dans la playlist");
                     }
                 });
+=======
+                    console.log(res)
+                    let val = res.videos + idVideo
+                    console.log(val)
+                    con.query("UPDATE PLAYLIST SET videos = ? where idPlaylist = ?", [val, idPlaylist],
+                        function(err, res) {
+                            resolve(res);
+                        });
+                });
+
+>>>>>>> 9e4035cc56d0a92274dd20f922aa774fe478f832
         });
     })
 }
