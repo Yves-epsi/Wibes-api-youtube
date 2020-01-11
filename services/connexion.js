@@ -193,15 +193,16 @@ exports.associationVideoPLaylist = async (idPlaylist, idVideo) => {
             if (err) throw err;
             con.query("SELECT videos from PLAYLIST WHERE idPlaylist=?", idPlaylist,
                 function(err, res) {
-                    console.log(res)
-                    let val = res.videos + idVideo
-                    console.log(val)
-                    con.query("UPDATE PLAYLIST SET videos = ? where idPlaylist = ?", [val, idPlaylist],
-                    function(err, res) {
-                        resolve(res);
-                    });
+                    if(!res[0].videos.includes(idVideo)) {
+                        let val = res[0].videos + "/" + idVideo
+                        con.query("UPDATE PLAYLIST SET videos = ? where idPlaylist = ?", [val, idPlaylist],
+                        function(err, res) {
+                            resolve(res);
+                        });
+                    } else {
+                        resolve("La video est déja dans la playlist");
+                    }
                 });
-            
         });
     })
 }
