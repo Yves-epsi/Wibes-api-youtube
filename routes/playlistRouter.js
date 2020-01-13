@@ -16,7 +16,6 @@ var jsonParser = bodyParser.json()
  * @returns {object} 200 - An array of playlist info
  * @returns {Error}  default - Unexpected error
  */
-exports.foo = function() {}
 router.get('/', playlistController.getAllPlaylists);
 
 /**
@@ -27,7 +26,6 @@ router.get('/', playlistController.getAllPlaylists);
  * @returns {object} 200 - playlist about your playlist
  * @returns {Error}  default - Unexpected error
  */
-exports.foo = function() {}
 router.get('/name/:name', playlistController.getPlaylistByName);
 
 /**
@@ -38,7 +36,6 @@ router.get('/name/:name', playlistController.getPlaylistByName);
  * @returns {object} 200 - playlist about your playlist
  * @returns {Error}  default - Unexpected error
  */
-exports.foo = function() {}
 router.get('/:id', playlistController.getPlaylistById);
 
 /**
@@ -49,8 +46,7 @@ router.get('/:id', playlistController.getPlaylistById);
  * @returns {object} 200 - playlist about your playlist
  * @returns {Error}  default - Unexpected error
  */
-exports.foo = function() {}
-router.get('/playlist/:idplaylist', playlistController.getPlaylistByIdplaylist);
+router.get('/user/:idUser', playlistController.getPlaylistByIdUser);
 
 /**
  * This function comment is parsed by doctrine
@@ -61,7 +57,6 @@ router.get('/playlist/:idplaylist', playlistController.getPlaylistByIdplaylist);
  * @returns {object} 200 - An array of playlist info
  * @returns {Error}  default - Unexpected error
  */
-exports.foo = function() {}
 router.post('/', jsonParser, playlistController.createPlaylist);
 
 router.put('/:idPlaylist/:idVideo', playlistController.insertVideoInPlaylist);
@@ -76,8 +71,6 @@ router.put('/delete/:idPlaylist/:idVideo', playlistController.deleteVideoInPlayl
  * @returns {object} 200 - playlist about your playlist
  * @returns {Error}  default - Unexpected error
  */
-exports.foo = function() {}
 router.delete('/:id', playlistController.deletePlaylist);
 
-exports.foo = function() {}
 module.exports = router;

@@ -11,7 +11,6 @@ const router = express.Router();
  * @returns {object} 200 - An array of video info
  * @returns {Error}  default - Unexpected error
  */
-exports.foo = function() {}
 router.get('/', videoController.getAllVideos);
 
 /**
@@ -22,7 +21,6 @@ router.get('/', videoController.getAllVideos);
  * @returns {object} 200 - An array of video info
  * @returns {Error}  default - Unexpected error
  */
-exports.foo = function() {}
 router.get('/:id', videoController.getVideoById);
 
 /**
@@ -33,7 +31,6 @@ router.get('/:id', videoController.getVideoById);
  * @returns {object} 200 - An array of video info
  * @returns {Error}  default - Unexpected error
  */
-exports.foo = function() {}
 router.get('/title/:title', videoController.getVideoByTitle);
 
 /**
@@ -44,7 +41,6 @@ router.get('/title/:title', videoController.getVideoByTitle);
  * @returns {object} 200 - An array of video info
  * @returns {Error}  default - Unexpected error
  */
-exports.foo = function() {}
 router.post('/:id', videoController.insertInBase);
 
 module.exports = router;
