@@ -4,6 +4,9 @@ La documentation des chemins aux donées est : http://localhost:3000/api-docs
 Vous y trouverez une rubrique Playlist avec les urls d'accès aux données des playlistes
 Vous y trouverez une rubrique Vidéos avec les urls d'accès aux données des vidéos
 
+La strcuture de la base de données est dans le fichier bdd.sql
+Vous trouverez toutes les infos de connection à cette BDD dans le fichier services/connexion.js
+
 Pour lancer ce microService, il faut : 
   - cloner le projet
   - créer un fichier congig-mail.js 
