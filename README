@@ -8,13 +8,16 @@ La strcuture de la base de données est dans le fichier bdd.sql
 Vous trouverez toutes les infos de connection à cette BDD dans le fichier services/connexion.js
 
 Pour lancer ce microService, il faut : 
+
   - cloner le projet
+  
   - créer un fichier congig-mail.js 
  Dans l'arboresence générale, avec comme contenue : 
         module.exports = {
             user: "ADRESSE_EMAIL",
             pass: "MPD"
         }
+        
   - créer un fichier config.js dans le repertoire services avec comme contenu : 
         module.exports = {
             api: 'AIzaSyAN4uhkTbljQMj9xOTu6P1fwcPRMBpfuV0'
