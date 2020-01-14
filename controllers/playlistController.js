@@ -2,7 +2,6 @@ const videoController = require('./videoController');
 const connexionService = require('../services/connexion');
 
 exports.createPlaylist = (req, res) => {
-    console.log(req.body.name)
     connexionService.insertPlaylist(req.body.name, "", req.body.idUser)
     res.send("fini")
 };

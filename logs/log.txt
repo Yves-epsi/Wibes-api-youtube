@@ -476,3 +476,9 @@
 [2020-01-14T11:21:39.500] [ERROR] START SERVER - Démarrage de l'application
 [2020-01-14T11:21:40.912] [INFO] START SERVER - Démarrage de l'application
 [2020-01-14T11:21:40.930] [INFO] START SERVER - Application démarrée
+[2020-01-14T13:07:22.270] [ERROR] START SERVER - Démarrage de l'application
+[2020-01-14T13:07:25.340] [INFO] START SERVER - Démarrage de l'application
+[2020-01-14T13:07:25.382] [INFO] START SERVER - Application démarrée
+[2020-01-14T13:08:32.407] [ERROR] START SERVER - Démarrage de l'application
+[2020-01-14T13:08:32.655] [INFO] START SERVER - Démarrage de l'application
+[2020-01-14T13:08:32.686] [INFO] START SERVER - Application démarrée

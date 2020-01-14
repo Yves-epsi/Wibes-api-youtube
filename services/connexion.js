@@ -14,7 +14,6 @@ function connection() {
 exports.insertVideo = (idVideo, title, url, bio) => {
     //insert une video
     let newTitle = title.split("\'").join("\\'")
-    console.log(newTitle)
     let newBio = bio.split("\'").join("\\'")
     con = connection();
     con.connect(function(err) {
@@ -67,13 +66,11 @@ exports.selectVideoById = (id) => {
 exports.selectMultipleVideoById = (videos) => {
     //select des video
     let vids = "'" + videos.split("/").join("','") + "'"
-    console.log(vids)
     return new Promise(resolve => {
         con = connection();
         con.connect(function(err) {
             if (err) throw err;
             con.query("SELECT idVideo, title FROM video WHERE idVideo IN (" + vids + ")", function(err, res) {
-                console.log(res)
                 resolve(res);
             });
         });
@@ -200,7 +197,6 @@ exports.deleteVideoInPlaylist = (idPlaylist, idVideo) => {
                 function(err, res) {
                     if(res[0].videos.includes(idVideo)) {
                         let val = res[0].videos.replace("/"+ idVideo, "")
-                        console.log(val)
                         con.query("UPDATE PLAYLIST SET videos = ? where idPlaylist = ?", [val, idPlaylist],
                         function(err, res) {
                             resolve(res);

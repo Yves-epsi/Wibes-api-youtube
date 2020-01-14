@@ -33,7 +33,7 @@ router.get('/:id', videoController.getVideoById);
  * @returns {object} 200 - An array of video info
  * @returns {Error}  default - Unexpected error
  */
-router.get('/multiple/get', jsonParser, videoController.getMultipleVideoById);
+router.post('/multiple', jsonParser, videoController.getMultipleVideoById);
 
 /**
  * This function comment is parsed by doctrine
