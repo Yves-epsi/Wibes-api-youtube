@@ -195,8 +195,10 @@ exports.deleteVideoInPlaylist = (idPlaylist, idVideo) => {
             if (err) throw err;
             con.query("SELECT videos from PLAYLIST WHERE idPlaylist=?", idPlaylist,
                 function(err, res) {
+                    let val
                     if(res[0].videos.includes(idVideo)) {
-                        let val = res[0].videos.replace("/"+ idVideo, "")
+                        val = res[0].videos.replace("/"+ idVideo, "")
+                        val = res[0].videos.replace(idVideo + "/", "")
                         con.query("UPDATE PLAYLIST SET videos = ? where idPlaylist = ?", [val, idPlaylist],
                         function(err, res) {
                             resolve(res);
@@ -234,7 +236,12 @@ exports.associationVideoPLaylist = async(idPlaylist, idVideo) => {
             con.query("SELECT videos from PLAYLIST WHERE idPlaylist=?", idPlaylist,
                 function(err, res) {
                     if(!res[0].videos.includes(idVideo)) {
-                        let val = res[0].videos + "/" + idVideo
+                        let val
+                        if(res[0].videos==""){
+                            val = idVideo
+                        } else {
+                            val = res[0].videos + "/" + idVideo
+                        }
                         con.query("UPDATE PLAYLIST SET videos = ? where idPlaylist = ?", [val, idPlaylist],
                         function(err, res) {
                             resolve(res);
