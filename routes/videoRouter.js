@@ -6,8 +6,7 @@ const router = express.Router();
 /**
  * This function comment is parsed by doctrine
  * @route GET /
- * @group foo - Operations about video
- * No pramas 
+ * @group video - Operations about video
  * @returns {object} 200 - An array of video info
  * @returns {Error}  default - Unexpected error
  */
@@ -15,9 +14,9 @@ router.get('/', videoController.getAllVideos);
 
 /**
  * This function comment is parsed by doctrine
- * @route GET /
- * @group foo - Operations about video
- * @param id - id of your video
+ * @route GET /:id
+ * @group video - Operations about video
+ * @param {string} id - id of your video
  * @returns {object} 200 - An array of video info
  * @returns {Error}  default - Unexpected error
  */
@@ -25,9 +24,9 @@ router.get('/:id', videoController.getVideoById);
 
 /**
  * This function comment is parsed by doctrine
- * @route GET /
- * @group foo - Operations about video
- * @param title - title of your video
+ * @route GET /:title
+ * @group video - Operations about video
+ * @param {string} title - title of your video
  * @returns {object} 200 - An array of video info
  * @returns {Error}  default - Unexpected error
  */
@@ -35,9 +34,9 @@ router.get('/title/:title', videoController.getVideoByTitle);
 
 /**
  * This function comment is parsed by doctrine
- * @route POST /
- * @group foo - Operations about video
- * @param id - id of your video
+ * @route POST /:id
+ * @group video - Operations about video
+ * @param {String} id - id of your video
  * @returns {object} 200 - An array of video info
  * @returns {Error}  default - Unexpected error
  */
