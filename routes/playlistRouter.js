@@ -51,7 +51,7 @@ router.get('/user/:idUser', playlistController.getPlaylistByIdUser);
  * This function comment is parsed by doctrine
  * @route POST / 
  * @group playlist - Operations to create playlist
- * @param name, array of video, id user in the body
+ * @body name: name of the playlist, idUser: user of the playlist
  * @returns {object} 200 - An array of playlist info
  * @returns {Error}  default - Unexpected error
  */

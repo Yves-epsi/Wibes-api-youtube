@@ -13,6 +13,11 @@ exports.getVideoById = async (req, res) => {
     res.send(result);
 };
 
+exports.getMultipleVideoById = async (req, res) => {
+    const result = await connexionService.selectMultipleVideoById(req.body.videos);
+    res.send(result);
+};
+
 exports.getAllVideos = async (req, res) => {
     const result = await connexionService.selectVideo();
     res.send(result);

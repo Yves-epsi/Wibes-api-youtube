@@ -13,10 +13,13 @@ function connection() {
 
 exports.insertVideo = (idVideo, title, url, bio) => {
     //insert une video
+    let newTitle = title.split("\'").join("\\'")
+    console.log(newTitle)
+    let newBio = bio.split("\'").join("\\'")
     con = connection();
     con.connect(function(err) {
         if (err) throw err;
-        var sql = "INSERT INTO video (idVideo, title, url, bio) VALUES ('" + idVideo + "','" + title + "','" + url + "', '" + bio + "' )";
+        var sql = "INSERT INTO video (idVideo, title, url, bio) VALUES ('" + idVideo + "','" + newTitle + "','" + url + "', '" + newBio + "' )";
         con.query(sql, function(err) {
             if (err) throw err;
         });
@@ -60,6 +63,23 @@ exports.selectVideoById = (id) => {
         });
     });
 }
+
+exports.selectMultipleVideoById = (videos) => {
+    //select des video
+    let vids = "'" + videos.split("/").join("','") + "'"
+    console.log(vids)
+    return new Promise(resolve => {
+        con = connection();
+        con.connect(function(err) {
+            if (err) throw err;
+            con.query("SELECT idVideo, title FROM video WHERE idVideo IN (" + vids + ")", function(err, res) {
+                console.log(res)
+                resolve(res);
+            });
+        });
+    });
+}
+
 
 exports.selectPlaylistById = (id) => {
     //affiche le nom et les vidéos de chaque playlist
