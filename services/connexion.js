@@ -14,7 +14,6 @@ function connection() {
 exports.insertVideo = (idVideo, title, url, bio) => {
     //insert une video
     let newTitle = title.split("\'").join("\\'")
-    console.log(newTitle)
     let newBio = bio.split("\'").join("\\'")
     con = connection();
     con.connect(function(err) {
@@ -67,13 +66,11 @@ exports.selectVideoById = (id) => {
 exports.selectMultipleVideoById = (videos) => {
     //select des video
     let vids = "'" + videos.split("/").join("','") + "'"
-    console.log(vids)
     return new Promise(resolve => {
         con = connection();
         con.connect(function(err) {
             if (err) throw err;
             con.query("SELECT idVideo, title FROM video WHERE idVideo IN (" + vids + ")", function(err, res) {
-                console.log(res)
                 resolve(res);
             });
         });
@@ -198,9 +195,10 @@ exports.deleteVideoInPlaylist = (idPlaylist, idVideo) => {
             if (err) throw err;
             con.query("SELECT videos from PLAYLIST WHERE idPlaylist=?", idPlaylist,
                 function(err, res) {
+                    let val
                     if (res[0].videos.includes(idVideo)) {
-                        let val = res[0].videos.replace("/" + idVideo, "")
-                        console.log(val)
+                        val = res[0].videos.replace("/" + idVideo, "")
+                        val = res[0].videos.replace(idVideo + "/", "")
                         con.query("UPDATE PLAYLIST SET videos = ? where idPlaylist = ?", [val, idPlaylist],
                             function(err, res) {
                                 resolve(res);
@@ -238,7 +236,12 @@ exports.associationVideoPLaylist = async(idPlaylist, idVideo) => {
             con.query("SELECT videos from PLAYLIST WHERE idPlaylist=?", idPlaylist,
                 function(err, res) {
                     if (!res[0].videos.includes(idVideo)) {
-                        let val = res[0].videos + "/" + idVideo
+                        let val
+                        if (res[0].videos == "") {
+                            val = idVideo
+                        } else {
+                            val = res[0].videos + "/" + idVideo
+                        }
                         con.query("UPDATE PLAYLIST SET videos = ? where idPlaylist = ?", [val, idPlaylist],
                             function(err, res) {
                                 resolve(res);

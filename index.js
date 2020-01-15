@@ -53,6 +53,7 @@ app.use(function(err, req, res, next) {
     logger.writeLog("Erreur au démarrage de l'application.", "START SERVER", "ERROR");
 });
 
+
 app.use('/', indexRouter);
 app.use('/playlist', playlistRouter);
 app.use('/video', VideoRouter);
