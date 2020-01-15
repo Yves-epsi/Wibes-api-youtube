@@ -81,10 +81,10 @@ router.put('/delete/:idPlaylist/:idVideo', playlistController.deleteVideoInPlayl
 
 /**
  * This function comment is parsed by doctrine
- * @route GET /:name
+ * @route delete /:name
  * @group playlist - Operations about playlist
  * @param {string} name - name of your playlist
- * @returns {object} 200 - playlist about your playlist
+ * @returns {object} 200 - sucess deleting playlist
  * @returns {Error}  default - Unexpected error
  */
 router.delete('/:id', playlistController.deletePlaylist);

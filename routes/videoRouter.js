@@ -27,7 +27,7 @@ router.get('/:id', videoController.getVideoById);
 
 /**
  * This function comment is parsed by doctrine
- * @route GET /:id
+ * @route POST /multiple'
  * @group video - Operations about video
  * @body videos: string of all the videos
  * @returns {object} 200 - An array of video info
