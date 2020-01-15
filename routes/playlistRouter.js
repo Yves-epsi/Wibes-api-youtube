@@ -61,8 +61,8 @@ router.post('/', jsonParser, playlistController.createPlaylist);
  * Inserer une video dans une playlist
  * @route PUT /:idPlaylist/:idVideo
  * @group playlist - Operations about playlist
- * @param {string} idPlaylist - idPlaylist of your playlist
- * @param {string} idVideo - idVideo of your playlist
+ * @param {string} idPlaylist - idPlaylist
+ * @param {string} idVideo - idVideo
  * @returns {object} 200 - sucess of inserting video in playlist
  * @returns {Error}  default - Unexpected error
  */
@@ -72,8 +72,8 @@ router.put('/:idPlaylist/:idVideo', playlistController.insertVideoInPlaylist);
  * Supprimer une video dans une playlist
  * @route PUT /delete/:idPlaylist/:idVideo
  * @group playlist - Operations about playlist
- * @param {string} idPlaylist - idPlaylist of your playlist
- * @param {string} idVideo - idVideo of your playlist
+ * @param {string} idPlaylist - idPlaylist
+ * @param {string} idVideo - idVideo
  * @returns {object} 200 - sucess of deleting video in playlist
  * @returns {Error}  default - Unexpected error
  */
