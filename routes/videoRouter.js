@@ -27,7 +27,7 @@ router.get('/:id', videoController.getVideoById);
 
 /**
  * Avoir plusieurs videos
- * @route POST /multiple'
+ * @route POST /multiple
  * @group video - Operations about video
  * @body videos: string of all the videos
  * @returns {object} 200 - An array of video info
