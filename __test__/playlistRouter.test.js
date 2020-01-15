@@ -12,7 +12,7 @@ describe("Test get info playlist", () => {
 
 describe("Test 1 playlist with name", () => {
     it("get 1 playlist with name", () => {
-        supertest(app).get('name/PLAYLIST_NAME').then((res) => {
+        supertest(app).get('name/rap').then((res) => {
             expect(res.status).toBe(200);
         });
     });
@@ -20,7 +20,7 @@ describe("Test 1 playlist with name", () => {
 
 describe("Test 1 playlist with id", () => {
     it("get 1 playlist with id", () => {
-        supertest(app).get('PLAYLIST_ID').then((res) => {
+        supertest(app).get('1').then((res) => {
             expect(res.status).toBe(200);
         });
     });
@@ -28,7 +28,7 @@ describe("Test 1 playlist with id", () => {
 
 describe("Test all user's playlist", () => {
     it("put all user's playlist", () => {
-        supertest(app).put('/user/ID_USER').then((res) => {
+        supertest(app).put('/user/1').then((res) => {
             expect(res.status).toBe(200);
         });
     });
@@ -36,7 +36,7 @@ describe("Test all user's playlist", () => {
 
 describe("Test put (inserting) video in playlist", () => {
     it("Test put (inserting) video in playlist", () => {
-        supertest(app).put('/ID_PLAYLIST/ID_VIDEO').then((res) => {
+        supertest(app).put('/1/WJizkgr2_pY').then((res) => {
             expect(res.status).toBe(200);
         });
     });
@@ -45,15 +45,15 @@ describe("Test put (inserting) video in playlist", () => {
 
 describe("Test put (deleting) video in playlist", () => {
     it("Test put (deleting) video in playlist", () => {
-        supertest(app).put('/delete/ID_PLAYLIST/ID_VIDEO').then((res) => {
+        supertest(app).put('/delete/1/WJizkgr2_pY').then((res) => {
             expect(res.status).toBe(200);
         });
     });
 });
 
-describe("Test put (deleting) video in playlist", () => {
-    it("Test put (deleting) video in playlist", () => {
-        supertest(app).put('/ID_PLAYLIST').then((res) => {
+describe("Test delete playlist", () => {
+    it("Test delete playlist", () => {
+        supertest(app).delete('/2').then((res) => {
             expect(res.status).toBe(200);
         });
     });
