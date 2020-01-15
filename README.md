@@ -18,15 +18,18 @@ Pour lancer ce microService, il faut :
   
   - créer un fichier congig-mail.js 
  Dans l'arboresence générale, avec comme contenue : 
-        module.exports = {
-            user: "ADRESSE_EMAIL",
-            pass: "MPD"
-        }
-        
+ ```javascript
+module.exports = {
+    user: "ADRESSE_EMAIL",
+    pass: "MPD"
+} ```
   - créer un fichier config.js dans le repertoire services avec comme contenu : 
-        module.exports = {
-            api: 'AIzaSyAN4uhkTbljQMj9xOTu6P1fwcPRMBpfuV0'
-        }
+   ```javascript
+ module.exports = {
+    api: 'AIzaSyAN4uhkTbljQMj9xOTu6P1fwcPRMBpfuV0'
+}
+} ```
+       
 
   - Lancer le microService avec la commande :
         node index.js
