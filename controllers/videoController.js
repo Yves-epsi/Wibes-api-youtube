@@ -3,9 +3,11 @@ const connexionService = require('../services/connexion');
 
 exports.insertInBase = (req, res) => {
     apiYoutubeService.getVideoById(req.params.id).then( (video) => {
-        connexionService.insertVideo(video.id, video.title, video.url, "");
+        connexionService.insertVideo(video.id, video.title, video.url, "").then(()=>{
+            res.send("fini")
+        })
     })
-    res.send("fini")
+    
 };
 
 exports.getVideoById = async (req, res) => {
