@@ -16,7 +16,7 @@ var jsonParser = bodyParser.json()
 router.get('/', videoController.getAllVideos);
 
 /**
- * This function comment is parsed by doctrine
+ * Avoir des video avec un id
  * @route GET /:id
  * @group video - Operations about video
  * @param {string} id - id of your video
@@ -26,8 +26,8 @@ router.get('/', videoController.getAllVideos);
 router.get('/:id', videoController.getVideoById);
 
 /**
- * This function comment is parsed by doctrine
- * @route GET /:id
+ * Avoir plusieurs videos
+ * @route POST /multiple
  * @group video - Operations about video
  * @body videos: string of all the videos
  * @returns {object} 200 - An array of video info
@@ -36,7 +36,7 @@ router.get('/:id', videoController.getVideoById);
 router.post('/multiple', jsonParser, videoController.getMultipleVideoById);
 
 /**
- * This function comment is parsed by doctrine
+ * Avoir une video avec un titre
  * @route GET /:title
  * @group video - Operations about video
  * @param {string} title - title of your video
@@ -46,7 +46,7 @@ router.post('/multiple', jsonParser, videoController.getMultipleVideoById);
 router.get('/title/:title', videoController.getVideoByTitle);
 
 /**
- * This function comment is parsed by doctrine
+ * Ajouter une video dans le BDD
  * @route POST /:id
  * @group video - Operations about video
  * @param {String} id - id of your video

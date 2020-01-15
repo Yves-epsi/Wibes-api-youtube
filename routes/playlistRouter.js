@@ -9,7 +9,7 @@ var jsonParser = bodyParser.json()
 
 
 /**
- * This function comment is parsed by doctrine
+ * Avoir toutes les playlistes
  * @route GET /
  * @group playlist - Operations about playlist
  * @returns {object} 200 - An array of playlist info
@@ -18,7 +18,7 @@ var jsonParser = bodyParser.json()
 router.get('/', playlistController.getAllPlaylists);
 
 /**
- * This function comment is parsed by doctrine
+ * Avoir une playlist avec nom
  * @route GET /:name
  * @group playlist - Operations about playlist
  * @param {string} name - name of your playlist
@@ -28,7 +28,7 @@ router.get('/', playlistController.getAllPlaylists);
 router.get('/name/:name', playlistController.getPlaylistByName);
 
 /**
- * This function comment is parsed by doctrine
+ * Avoir une playlist avec un ID
  * @route GET /:id
  * @group playlist - Operations about playlist
  * @param {integer} id - id of your playlist
@@ -38,7 +38,7 @@ router.get('/name/:name', playlistController.getPlaylistByName);
 router.get('/:id', playlistController.getPlaylistById);
 
 /**
- * This function comment is parsed by doctrine
+ * Avoir une playlist avec une ID utilisateur
  * @route GET /user/:idUser
  * @group playlist - Operations about playlist
  * @param {string} iduser - iduser of your playlist
@@ -48,7 +48,7 @@ router.get('/:id', playlistController.getPlaylistById);
 router.get('/user/:idUser', playlistController.getPlaylistByIdUser);
 
 /**
- * This function comment is parsed by doctrine
+ * Créer une nouvelle playlist
  * @route POST / 
  * @group playlist - Operations to create playlist
  * @body name: name of the playlist, idUser: user of the playlist
@@ -58,33 +58,33 @@ router.get('/user/:idUser', playlistController.getPlaylistByIdUser);
 router.post('/', jsonParser, playlistController.createPlaylist);
 
 /**
- * This function comment is parsed by doctrine
+ * Inserer une video dans une playlist
  * @route PUT /:idPlaylist/:idVideo
  * @group playlist - Operations about playlist
- * @param {string} idPlaylist - idPlaylist of your playlist
- * @param {string} idVideo - idVideo of your playlist
+ * @param {string} idPlaylist - idPlaylist
+ * @param {string} idVideo - idVideo
  * @returns {object} 200 - sucess of inserting video in playlist
  * @returns {Error}  default - Unexpected error
  */
 router.put('/:idPlaylist/:idVideo', playlistController.insertVideoInPlaylist);
 
 /**
- * This function comment is parsed by doctrine
+ * Supprimer une video dans une playlist
  * @route PUT /delete/:idPlaylist/:idVideo
  * @group playlist - Operations about playlist
- * @param {string} idPlaylist - idPlaylist of your playlist
- * @param {string} idVideo - idVideo of your playlist
+ * @param {string} idPlaylist - idPlaylist
+ * @param {string} idVideo - idVideo
  * @returns {object} 200 - sucess of deleting video in playlist
  * @returns {Error}  default - Unexpected error
  */
 router.put('/delete/:idPlaylist/:idVideo', playlistController.deleteVideoInPlaylist);
 
 /**
- * This function comment is parsed by doctrine
- * @route GET /:name
+ * Supprimer une playlist
+ * @route delete /:name
  * @group playlist - Operations about playlist
  * @param {string} name - name of your playlist
- * @returns {object} 200 - playlist about your playlist
+ * @returns {object} 200 - sucess deleting playlist
  * @returns {Error}  default - Unexpected error
  */
 router.delete('/:id', playlistController.deletePlaylist);

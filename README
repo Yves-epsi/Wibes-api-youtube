@@ -7,6 +7,9 @@ Vous y trouverez une rubrique Vidéos avec les urls d'accès aux données des vi
 La strcuture de la base de données est dans le fichier bdd.sql
 Vous trouverez toutes les infos de connection à cette BDD dans le fichier services/connexion.js
 
+Vous trouverez des testes unitaires dans le fichier __test__ qui test si oui ou non une les routes fonctionnent 
+lors de l'ajout de la DBB, il faudra ajouter des informations comme des ID qui sont présent dans votre BDD 
+
 Pour lancer ce microService, il faut : 
 
   - cloner le projet

@@ -7,3 +7,4 @@ npm-debug.log
 logs
 services/config.js
 /config-mail.js
+logs/log.txt

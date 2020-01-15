@@ -196,13 +196,13 @@ exports.deleteVideoInPlaylist = (idPlaylist, idVideo) => {
             con.query("SELECT videos from PLAYLIST WHERE idPlaylist=?", idPlaylist,
                 function(err, res) {
                     let val
-                    if(res[0].videos.includes(idVideo)) {
-                        val = res[0].videos.replace("/"+ idVideo, "")
+                    if (res[0].videos.includes(idVideo)) {
+                        val = res[0].videos.replace("/" + idVideo, "")
                         val = res[0].videos.replace(idVideo + "/", "")
                         con.query("UPDATE PLAYLIST SET videos = ? where idPlaylist = ?", [val, idPlaylist],
-                        function(err, res) {
-                            resolve(res);
-                        });
+                            function(err, res) {
+                                resolve(res);
+                            });
                     } else {
                         resolve("La video n'est pas dans la playlist");
                     }
@@ -235,17 +235,17 @@ exports.associationVideoPLaylist = async(idPlaylist, idVideo) => {
             if (err) throw err;
             con.query("SELECT videos from PLAYLIST WHERE idPlaylist=?", idPlaylist,
                 function(err, res) {
-                    if(!res[0].videos.includes(idVideo)) {
+                    if (!res[0].videos.includes(idVideo)) {
                         let val
-                        if(res[0].videos==""){
+                        if (res[0].videos == "") {
                             val = idVideo
                         } else {
                             val = res[0].videos + "/" + idVideo
                         }
                         con.query("UPDATE PLAYLIST SET videos = ? where idPlaylist = ?", [val, idPlaylist],
-                        function(err, res) {
-                            resolve(res);
-                        });
+                            function(err, res) {
+                                resolve(res);
+                            });
                     } else {
                         resolve("La video est déja dans la playlist");
                     }
